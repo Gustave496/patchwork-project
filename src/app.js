@@ -12,8 +12,6 @@ const modules = {
       <div id="clock"></div>
     </section>
   `,
-  // Exemple : ajout d'un module sans section
-  'MonModule': () => "<div>Ma nouvelle idée !</div>",
   // Deezer
   'Deezer': () => `
   <section>
@@ -64,5 +62,6 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
