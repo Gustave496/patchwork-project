@@ -13,15 +13,14 @@ const modules = {
     </section>
   `,
   // Exemple : ajout d'un module sans section
-  'MonModule': () => "<div>Ma nouvelle idée !</div>"
-  ,
+  'MonModule': () => "<div>Ma nouvelle idée !</div>",
   // Deezer
   'Deezer': () => `
-    <section>
-      <h2>Album Deezer</h2>
-      <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-    </section>
-  `,
+  <section>
+    <h2>Album Deezer</h2>
+    <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+  </section>
+`,
 };
 
 const menu = document.getElementById('menu');
@@ -65,4 +64,5 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
