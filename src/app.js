@@ -1,24 +1,32 @@
 const modules = {
-  'Bienvenue': () => `
+  'Bienvenue ': () => `
     <section>
       <h2>Bienvenue !</h2>
-      <p>Ceci est le début de votre site patchwork. Ajoutez vos idées au fur et à mesure !</p>
+      <p>Ceci est mon site patchwork. Ajoutez vos idées au fur et à mesure !</p>
     </section>
   `,
   // Exemple : ajout d'un module
-  'Horloge': () => `
+  'Horloge ': () => `
     <section>
       <h2>Horloge</h2>
       <div id="clock"></div>
     </section>
   `,
   // Deezer
-  'Deezer': () => `
+  'Deezer ': () => `
   <section>
-    <h2>Album Deezer</h2>
+    <h2>Mellon Collie</h2>
     <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
   </section>
 `,
+  // Ya combien combien 
+  'Ya combien combien ': () => `
+  <section>
+    <h2>FoorMercato </h2>
+  <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+  </section>
+`,
+
 };
 
 const menu = document.getElementById('menu');
@@ -62,6 +70,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
