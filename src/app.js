@@ -20,7 +20,7 @@ const modules = {
   </section>
 `,
   // Ya combien combien 
-  'Ya combien combien': () => `
+  'Ya_combien_combien': () => `
   <section>
     <h2>FoorMercato </h2>
   <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
@@ -70,6 +70,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
