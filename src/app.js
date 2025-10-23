@@ -13,13 +13,8 @@ const modules = {
     </section>
   `,
   // Exemple : ajout d'un module sans section
-  'MonModule': () => "<div>Ma nouvelle idée !</div>",
-    // Mellon collie
-  'Mellon': () => `
-    <section>
-<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-    </section>
-  `,
+  'MonModule': () => "<div>Ma nouvelle idée !</div>"
+  ,
   // Deezer
   'Deezer': () => `
     <section>
@@ -70,3 +65,4 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
