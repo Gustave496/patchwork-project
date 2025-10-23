@@ -22,8 +22,13 @@ const modules = {
   // Ya combien combien 
   'Ya_combien_combien': () => `
   <section>
-    <h2>FoorMercato </h2>
-  <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+    <h2>ScoreBird </h2>
+const iframe = document.createElement('iframe');
+iframe.src = "https://widget.scorebird.com/horizontal-game-widget.html?sport=soccer&live_final_only=true";
+iframe.width = "100%";
+iframe.height = "150";
+iframe.style.border = "0";
+document.body.appendChild(iframe);
   </section>
 `,
 
@@ -70,6 +75,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
