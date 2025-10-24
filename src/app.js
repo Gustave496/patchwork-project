@@ -21,12 +21,20 @@ const modules = {
 `,
   // Ya combien combien 
   'Ya_combien_combien': () => `
-  <section>
-    <h2>FoorMercato </h2>
-  <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
-  </section>
+<section>
+  <h2>Scores de foot en direct</h2>
+  <iframe
+    src="https://www.flashscore.fr/"
+    width="100%"
+    height="800"
+    frameborder="0"
+    style="border:0;overflow:hidden;"
+    title="Scores en direct"
+  ></iframe>
+</section>
 `,
 
+  
 };
 
 const menu = document.getElementById('menu');
@@ -70,6 +78,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
