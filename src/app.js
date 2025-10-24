@@ -20,8 +20,8 @@ const modules = {
   </section>
 `,
 // main.js
-import { Widgets } from './Widgets.js';
-document.querySelector('#app').innerHTML = Widgets['FootballLive']();
+//import { Widgets } from './Widgets.js';
+//document.querySelector('#app').innerHTML = Widgets['FootballLive']();
 };
 
 const menu = document.getElementById('menu');
@@ -65,6 +65,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
