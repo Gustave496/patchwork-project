@@ -19,9 +19,14 @@ const modules = {
     <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
   </section>
 `,
-// main.js
-//import { Widgets } from './Widgets.js';
-//document.querySelector('#app').innerHTML = Widgets['FootballLive']();
+  // Ya combien combien 
+  'Ya_combien_combien': () => `
+  <section>
+    <h2>FoorMercato </h2>
+  <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+  </section>
+`,
+
 };
 
 const menu = document.getElementById('menu');
@@ -65,6 +70,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
