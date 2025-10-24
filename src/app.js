@@ -3,6 +3,7 @@ const modules = {
     <section>
       <h2>Bienvenue !</h2>
       <p>Ceci est mon site patchwork. Ajoutez vos idées au fur et à mesure !</p>
+<a href="https://github.com/Gustave496/patchwork-project" target="_blank" rel="noopener">mon GitHub</a>
     </section>
   `,
   // Exemple : ajout d'un module
@@ -83,6 +84,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
