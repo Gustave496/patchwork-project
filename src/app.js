@@ -34,7 +34,7 @@ const modules = {
 </section>
 `,
   // Paris 12eme 
-  'Paris 12eme': () => `
+  'Paris_12eme': () => `
   <section>
   <h2>Découvrir le 12e arrondissement de Paris</h2>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42019.37595414862!2d2.375953652321544!3d48.83511390720188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6728cb7d7d747%3A0x50b82c368941b00!2s12e%20Arrondissement%2C%2075012%20Paris!5e0!3m2!1sfr!2sfr!4v1761265979146!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -83,6 +83,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
