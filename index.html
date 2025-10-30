@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Patchwork d’Idées</title>
+  <link rel="icon" href="favicon-96x96.png" sizes="96x96" type="image/png">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon-96x96.png">
 </head>
 <body>
-  <header>
-    <h1>Patchwork d’Idées</h1>
-    <nav id="menu"></nav>
+  <a class="skip-link" href="#content">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title">Patchwork d’Idées</h1>
+
+      <nav class="site-nav" role="navigation" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active" aria-current="page">Accueil</a></li>
+          <li><a href="#" class="nav-link">Projets</a></li>
+          <li><a href="#" class="nav-link">À propos</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main id="content"></main>
+
+  <main id="content" class="container" role="main" tabindex="-1">
+    <section class="card">
+      <h2 class="card-title">Bienvenue</h2>
+      <p>Remplacez ce texte par votre contenu. Ce modèle privilégie la lisibilité, l’accessibilité et un code simple à maintenir.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Patchwork d’Idées</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small progressive enhancement only: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
   <script type="module" src="src/app.js"></script>
 </body>
-
 </html>
+
+
 
 
 
