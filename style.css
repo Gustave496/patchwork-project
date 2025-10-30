@@ -1,41 +1,180 @@
-body {
-  font-family system-ui, sans-serif;
-  background #fafafa;
-  margin 0;
-  color #222;
+/* style.css — Sober, clean and maintainable baseline
+   - CSS variables for easy theming
+   - Simple layout with a centered container
+   - Accessible focus styles and skip link
+*/
+
+:root{
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #1f2937;        /* dark gray for text */
+  --muted: #6b7280;       /* muted text */
+  --accent: #111827;      /* accent color for links/active */
+  --radius: 10px;
+  --container-max: 960px;
+  --shadow: 0 6px 18px rgba(17,24,39,0.06);
+  --gap: 1rem;
+  --transition: 180ms ease;
 }
-header {
-  background #fff;
-  border-bottom 1px solid #eee;
-  padding 1rem;
-  text-align center;
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b1020;
+    --surface: #0f1724;
+    --text: #e6eef8;
+    --muted: #94a3b8;
+    --accent: #e6eef8;
+    --shadow: 0 6px 18px rgba(2,6,23,0.6);
+  }
 }
-h1 {
-  font-weight 300;
-  margin 0 0 0.5em 0;
-  letter-spacing 0.05em;
+
+/* Box sizing and base */
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
 }
-nav {
-  display flex;
-  gap 1em;
-  justify-content center;
+
+/* Container helper */
+.container{
+  width:100%;
+  max-width:var(--container-max);
+  margin:0 auto;
+  padding:0 1rem;
 }
-nav a {
-  text-decoration none;
-  color #888;
-  border-bottom 2px solid transparent;
-  padding-bottom 0.2em;
-  transition color 0.2s, border-color 0.2s;
+
+/* Skip link for keyboard users */
+.skip-link{
+  position:absolute;
+  left:0;
+  top:0;
+  transform:translateY(-100%);
+  background:var(--accent);
+  color:var(--surface);
+  padding:0.5rem 0.75rem;
+  border-radius:0 0 6px 0;
+  z-index:1000;
+  text-decoration:none;
 }
-nav a.active {
-  color #222;
-  border-color #222;
+.skip-link:focus{
+  transform:none;
+  outline:2px solid #fff;
 }
-main {
-  max-width 600px;
-  margin 2em auto;
-  padding 1em;
-  background #fff;
-  border-radius 10px;
-  box-shadow 0 2px 6px #0001;
+
+/* Header */
+.site-header{
+  background:var(--surface);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
 }
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  padding:1rem 0;
+}
+
+/* Title */
+.site-title{
+  font-weight:600;
+  font-size:1rem;
+  margin:0;
+  letter-spacing:0.02em;
+}
+
+/* Navigation */
+.site-nav{}
+.nav-list{
+  display:flex;
+  gap:0.5rem;
+  margin:0;
+  padding:0;
+  list-style:none;
+  align-items:center;
+}
+.nav-link{
+  display:inline-block;
+  padding:0.45rem 0.6rem;
+  color:var(--muted);
+  text-decoration:none;
+  border-radius:6px;
+  transition: color var(--transition), background var(--transition), box-shadow var(--transition);
+  font-weight:500;
+  font-size:0.95rem;
+}
+.nav-link:hover,
+.nav-link:focus{
+  color:var(--accent);
+  background:rgba(0,0,0,0.03);
+  outline:none;
+}
+.nav-link.active,
+.nav-link[aria-current="page"]{
+  color:var(--accent);
+  background:transparent;
+  box-shadow: inset 0 -2px 0 0 var(--accent);
+}
+
+/* Main content */
+main{
+  padding:2rem 0;
+}
+
+/* Card */
+.card{
+  background:var(--surface);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:1.25rem;
+  color:var(--text);
+}
+.card-title{
+  margin-top:0;
+  margin-bottom:0.5rem;
+  font-size:1.125rem;
+  font-weight:600;
+}
+
+/* Footer */
+.site-footer{
+  padding:1.5rem 0;
+  color:var(--muted);
+  font-size:0.9rem;
+  border-top:1px solid rgba(0,0,0,0.04);
+}
+
+/* Accessibility: visible focus when navigating with keyboard */
+:focus{
+  outline:2px solid rgba(59,130,246,0.6);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* Small screens: stack header elements */
+@media (max-width:640px){
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0.5rem;
+  }
+  .nav-list{
+    flex-wrap:wrap;
+  }
+}
+
+/* Motion reduction */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+
