@@ -1,4 +1,4 @@
-const modules = {
+const module = {
   'Bienvenue': () => `
     <section>
       <h2>Bienvenue !</h2>
@@ -70,6 +70,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
