@@ -1,4 +1,4 @@
-const module = {
+const modules = {
   'Bienvenue': () => `
     <section>
       <h2>Bienvenue !</h2>
@@ -16,7 +16,6 @@ const module = {
   'Deezer': () => `
   <section>
     <h2>Mellon Collie</h2>
-    <div id="deezer"></div>
     <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
   </section>
 `,
@@ -24,7 +23,6 @@ const module = {
   'Ya_combien_combien': () => `
   <section>
     <h2>Ya combien combien</h2>
-    <div id="yacombiencombien"></div>
   <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
   </section>
 `,
@@ -72,6 +70,7 @@ window.addEventListener('hashchange', () => {
 renderMenu();
 
 renderContent();
+
 
 
 
