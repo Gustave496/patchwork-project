@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modules[mod]) {
       content.innerHTML = modules[mod]();
       
-      // Update clock if Horloge tab is active
       if (mod === 'Horloge') {
         const clock = document.getElementById('clock');
         function updateClock() {
