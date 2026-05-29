@@ -19,7 +19,7 @@ const modules = {
       style="border: none;"
     ></iframe>
   `,
-  'Ya_combien_combien': () => `
+  'YaCombienCombien.com': () => `
     <h2>Ya combien combien.com</h2>
     <a href="www.footmercato.net">footmercato.net</a>
   `,
