@@ -7,18 +7,6 @@ const modules = {
     <h2>Horloge</h2>
     <p id="clock" style="font-size: 2em; text-align: center; font-weight: bold;"></p>
   `,
-  'Deezer': () => `
-    <h2>Ma playlist Deezer</h2>
-    <iframe
-      scrolling="no"
-      frameborder="0"
-      allowTransparency="true"
-      src="https://widget.deezer.com/widget/dark/album/6158273"
-      width="100%"
-      height="300"
-      style="border: none;"
-    ></iframe>
-  `,
   'YaCombienCombien.com': () => `
     <h2>Ya combien combien.com</h2>
     <p>
