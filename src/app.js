@@ -29,47 +29,49 @@ const modules = {
   `
 };
 
-const menu = document.getElementById('menu');
-const content = document.getElementById('content');
+document.addEventListener('DOMContentLoaded', function() {
+  const menu = document.getElementById('menu');
+  const content = document.getElementById('content');
 
-function renderMenu() {
-  menu.innerHTML = '';
-  Object.keys(modules).forEach((mod, i) => {
-    const link = document.createElement('a');
-    link.textContent = mod;
-    link.href = '#' + mod;
-    link.className = window.location.hash.slice(1) === mod || (!window.location.hash && i === 0) ? 'active' : '';
-    link.onclick = (e) => {
-      e.preventDefault();
-      window.location.hash = mod;
-      renderContent();
-      renderMenu();
-    };
-    menu.appendChild(link);
-  });
-}
+  function renderMenu() {
+    menu.innerHTML = '';
+    Object.keys(modules).forEach((mod, i) => {
+      const link = document.createElement('a');
+      link.textContent = mod;
+      link.href = '#' + mod;
+      link.className = window.location.hash.slice(1) === mod || (!window.location.hash && i === 0) ? 'active' : '';
+      link.onclick = (e) => {
+        e.preventDefault();
+        window.location.hash = mod;
+        renderContent();
+        renderMenu();
+      };
+      menu.appendChild(link);
+    });
+  }
 
-function renderContent() {
-  const mod = window.location.hash.slice(1) || Object.keys(modules)[0];
-  if (modules[mod]) {
-    content.innerHTML = modules[mod]();
-    
-    // Update clock if Horloge tab is active
-    if (mod === 'Horloge') {
-      const clock = document.getElementById('clock');
-      function updateClock() {
-        clock.textContent = new Date().toLocaleTimeString('fr-FR');
+  function renderContent() {
+    const mod = window.location.hash.slice(1) || Object.keys(modules)[0];
+    if (modules[mod]) {
+      content.innerHTML = modules[mod]();
+      
+      // Update clock if Horloge tab is active
+      if (mod === 'Horloge') {
+        const clock = document.getElementById('clock');
+        function updateClock() {
+          clock.textContent = new Date().toLocaleTimeString('fr-FR');
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
       }
-      updateClock();
-      setInterval(updateClock, 1000);
     }
   }
-}
 
-window.addEventListener('hashchange', () => {
-  renderContent();
+  window.addEventListener('hashchange', () => {
+    renderContent();
+    renderMenu();
+  });
+
   renderMenu();
+  renderContent();
 });
-
-renderMenu();
-renderContent();
