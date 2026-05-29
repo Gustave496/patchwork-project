@@ -12,10 +12,13 @@ const modules = {
     <p>
       <a href="https://www.footmercato.net" target="_blank" rel="noopener noreferrer">Foot Mercato</a>
     </p>
-    <a class="tvsports-widget" href="https://tv-sports.fr" data-sport-id="133" data-direct-only="1" data-width="100%" data-height="650px">Programme TV Foot</a>
-    <script async type="text/javascript" src="https://tv-sports.fr/widget.js"></script>
-    <div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings-loc.js')); mw('params', { leagueID: 2392, lang: 'fr' }); </script>
-
+    <iframe
+  src="https://www.sofascore.com/embed/tournament/7/season/2026"
+  width="100%"
+  height="600"
+  frameborder="0"
+  scrolling="no">
+</iframe>
   `,
   'Projets': () => `
     <h2>Projets</h2>
