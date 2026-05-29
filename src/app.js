@@ -18,6 +18,7 @@ const modules = {
       height="300"
       style="border: none;"
     ></iframe>
+    <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
   `,
   'Ya combien combien': () => `
     <h2>Ya combien combien</h2>
