@@ -21,7 +21,7 @@ const modules = {
   `,
   'YaCombienCombien.com': () => `
     <h2>Ya combien combien.com</h2>
-    <a href="www.footmercato.net">footmercato.net target="_blank" rel="noopener noreferrer"</a>
+    <a href="footmercato.net">www.footmercato.net target="_blank" rel="noopener noreferrer"</a>
   `,
   'Projets': () => `
     <h2>Projets</h2>
