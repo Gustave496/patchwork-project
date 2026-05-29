@@ -9,8 +9,8 @@ const modules = {
   `,
   'Deezer': () => `
     <h2>Deezer</h2>
-    <p>Voici votre intégration Deezer.</p>
     <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+    <p>Voici votre intégration Deezer.</p>
   `,
   'Ya combien combien': () => `
     <h2>Ya combien combien</h2>
