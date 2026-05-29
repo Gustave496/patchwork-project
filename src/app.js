@@ -12,6 +12,14 @@ const modules = {
     <p>
       <a href="https://www.footmercato.net" target="_blank" rel="noopener noreferrer">Foot Mercato</a>
     </p>
+    <iframe
+  src="https://www.renderfoot.com/embed/league-table"
+  width="100%"
+  height="600"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+<textarea class="form-control" rows="5"><iframe width="300" height="580" src="http://www.football.co.uk/widget/premier-league/" frameborder="0" scrolling="no"></iframe></textarea>
 <a class="tvsports-widget"
    href="https://tv-sports.fr"
    data-sport-id="133"
