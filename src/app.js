@@ -27,10 +27,6 @@ const modules = {
     <h2>Projets</h2>
     <p>Découvrez mes projets ici.</p>
   `,
-  'À propos': () => `
-    <h2>À propos</h2>
-    <p>En savoir plus sur moi.</p>
-  `,
   'Contact': () => `
     <h2>Contact</h2>
     <p>Vous pouvez me contacter à travers cette page.</p>
