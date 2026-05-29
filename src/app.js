@@ -21,9 +21,11 @@ const modules = {
   `,
   'YaCombienCombien.com': () => `
     <h2>Ya combien combien.com</h2>
-    <a href="footmercato.net"http://>www.footmercato.net target="_blank" rel="noopener noreferrer"</a>
-    <a class="tvsports-widget" href="https://tv-sports.fr" data-sport-id="133" data-direct-only="1" data-width="100%" data-height="650px">Programme TV Foot</a><script async type="text/javascript" src="https://tv-sports.fr/widget.js"></script>
-
+    <p>
+      <a href="https://www.footmercato.net" target="_blank" rel="noopener noreferrer">Foot Mercato</a>
+    </p>
+    <a class="tvsports-widget" href="https://tv-sports.fr" data-sport-id="133" data-direct-only="1" data-width="100%" data-height="650px">Programme TV Foot</a>
+    <script async type="text/javascript" src="https://tv-sports.fr/widget.js"></script>
   `,
   'Projets': () => `
     <h2>Projets</h2>
