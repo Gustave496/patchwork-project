@@ -8,8 +8,16 @@ const modules = {
     <p id="clock" style="font-size: 2em; text-align: center; font-weight: bold;"></p>
   `,
   'Deezer': () => `
-    <h2>Deezer</h2>
-    <p>Voici votre intégration Deezer.</p>
+    <h2>Ma playlist Deezer</h2>
+    <iframe
+      scrolling="no"
+      frameborder="0"
+      allowTransparency="true"
+      src="https://widget.deezer.com/widget/dark/track/123456789"
+      width="100%"
+      height="300"
+      style="border: none;"
+    ></iframe>
   `,
   'Ya combien combien': () => `
     <h2>Ya combien combien</h2>
@@ -26,18 +34,6 @@ const modules = {
   'Contact': () => `
     <h2>Contact</h2>
     <p>Vous pouvez me contacter à travers cette page.</p>
-  `,
-    'Deezer': () => `
-    <h2>Ma playlist Deezer</h2>
-    <iframe
-      scrolling="no"
-      frameborder="0"
-      allowTransparency="true"
-      src="https://widget.deezer.com/widget/dark/track/123456789"
-      width="100%"
-      height="300"
-      style="border: none;"
-    ></iframe>
   `
 };
 
