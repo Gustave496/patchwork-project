@@ -19,9 +19,9 @@ const modules = {
       style="border: none;"
     ></iframe>
   `,
-  'Ya combien combien': () => `
-    <h2>Ya combien combien</h2>
-    <p>Module Ya combien combien - À compléter</p>
+  'Ya_combien_combien': () => `
+    <h2>Ya combien combien.com</h2>
+    <a href="www.footmercato.net">footmercato.net</a>
   `,
   'Projets': () => `
     <h2>Projets</h2>
