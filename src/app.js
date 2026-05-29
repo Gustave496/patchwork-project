@@ -1,32 +1,32 @@
 const modules = {
-  'Bienvenue': () => `
-    <section>
-      <h2>Bienvenue !</h2>
-      <p>Ceci est mon site patchwork. Ajoutez vos idées au fur et à mesure !</p>
-    </section>
+  'Accueil': () => `
+    <h2>Bienvenue !</h2>
+    <p>Ceci est le début de votre site patchwork. Ajoutez vos idées au fur et à mesure !</p>
   `,
-  // Exemple : ajout d'un module
   'Horloge': () => `
-    <section>
-      <h2>Horloge</h2>
-      <div id="clock"></div>
-    </section>
+    <h2>Horloge</h2>
+    <p id="clock" style="font-size: 2em; text-align: center; font-weight: bold;"></p>
   `,
-  // Deezer
   'Deezer': () => `
-  <section>
-    <h2>Mellon Collie</h2>
-    <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/6158273" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-  </section>
-`,
-  // Ya combien combien 
-  'Ya_combien_combien': () => `
-  <section>
+    <h2>Deezer</h2>
+    <p>Voici votre intégration Deezer.</p>
+  `,
+  'Ya combien combien': () => `
     <h2>Ya combien combien</h2>
-  <iframe src="https://www.footmercato.net/widget/scores-direct" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
-  </section>
-`,
-
+    <p>Module Ya combien combien - À compléter</p>
+  `,
+  'Projets': () => `
+    <h2>Projets</h2>
+    <p>Découvrez mes projets ici.</p>
+  `,
+  'À propos': () => `
+    <h2>À propos</h2>
+    <p>En savoir plus sur moi.</p>
+  `,
+  'Contact': () => `
+    <h2>Contact</h2>
+    <p>Vous pouvez me contacter à travers cette page.</p>
+  `
 };
 
 const menu = document.getElementById('menu');
@@ -37,7 +37,7 @@ function renderMenu() {
   Object.keys(modules).forEach((mod, i) => {
     const link = document.createElement('a');
     link.textContent = mod;
-    link.href = '#'+mod;
+    link.href = '#' + mod;
     link.className = window.location.hash.slice(1) === mod || (!window.location.hash && i === 0) ? 'active' : '';
     link.onclick = (e) => {
       e.preventDefault();
@@ -51,14 +51,18 @@ function renderMenu() {
 
 function renderContent() {
   const mod = window.location.hash.slice(1) || Object.keys(modules)[0];
-  content.innerHTML = modules[mod]();
-  if (mod === 'Horloge') {
-    const clock = document.getElementById('clock');
-    function updateClock() {
-      clock.textContent = new Date().toLocaleTimeString();
+  if (modules[mod]) {
+    content.innerHTML = modules[mod]();
+    
+    // Update clock if Horloge tab is active
+    if (mod === 'Horloge') {
+      const clock = document.getElementById('clock');
+      function updateClock() {
+        clock.textContent = new Date().toLocaleTimeString('fr-FR');
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
     }
-    updateClock();
-    setInterval(updateClock, 1000);
   }
 }
 
@@ -68,18 +72,4 @@ window.addEventListener('hashchange', () => {
 });
 
 renderMenu();
-
 renderContent();
-
-
-
-
-
-
-
-
-
-
-
-
-
