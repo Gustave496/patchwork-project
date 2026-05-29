@@ -13,15 +13,6 @@ const modules = {
       <a href="https://www.footmercato.net" target="_blank" rel="noopener noreferrer">Foot Mercato</a>
     </p>
 <iframe width="300" height="580" src="http://www.football.co.uk/widget/premier-league/" frameborder="0" scrolling="no"></iframe>
-<a class="tvsports-widget"
-   href="https://tv-sports.fr"
-   data-sport-id="133"
-   data-direct-only="1"
-   data-width="100%"
-   data-height="650px">
-  Programme TV Foot
-</a>
-<script async type="text/javascript" src="https://tv-sports.fr/widget.js"></script>
   `,
   'Projets': () => `
     <h2>Projets</h2>
